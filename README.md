@@ -4,5 +4,7 @@
 - Api
    - Create a Admin Product
    - Get All Product
-   - Update a Product
+   - Update a Product -- Admin
+   - Delete a Product -- Admin
+   - Get the Product Details
   
