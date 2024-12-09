@@ -1,15 +1,18 @@
+# Material icon tool - it is used for the Folder && File for looking pretty good.
+
 # Ecommerce
-- Make the schema of the Product 
-- Make the product Api
+- Make the schema of the Product.
+- Make the product Api.
   
-- Api
-   - Create a Admin Product
-   - Get All Product
-   - Update a Product -- Admin
-   - Delete a Product -- Admin
-   - Get the Product Details
+# Api
+   - Create a Admin Product.
+   - Get All Product.
+   - Update a Product -- Admin.
+   - Delete a Product -- Admin.
+   - Get the Product Details.
   
-- Error Handling 
-   - Errorhander class
-   - catchAsyncErrors class
-   
+# Error Handling 
+   - Errorhander class.
+   - catchAsyncErrors class.
+   - Unhandled Promise Rejection.
+   - Uncaughted Exception.
