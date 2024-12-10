@@ -19,5 +19,6 @@
    - cast Error Handling.
   
 # Feature of Ecommerce
-   - Search 
-   - Filter the product 
+   - Search.
+   - Filter the product.
+   - Price Filter
