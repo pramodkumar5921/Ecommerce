@@ -21,4 +21,6 @@
 # Feature of Ecommerce
    - Search.
    - Filter the product.
-   - Price Filter
+   - Price Filter.
+   - pageination.
+
