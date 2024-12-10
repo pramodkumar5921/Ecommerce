@@ -29,4 +29,5 @@
    - password is Encrypted
    - Token Generation  
    - Login Functionality
+   - Cookies Functionlity
   
