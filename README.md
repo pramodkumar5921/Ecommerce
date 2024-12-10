@@ -20,3 +20,4 @@
   
 # Feature of Ecommerce
    - Search 
+   - Filter the product 
