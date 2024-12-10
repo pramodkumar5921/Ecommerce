@@ -26,4 +26,5 @@
 
 # User Register
    - Password Validation
+   - password is Encrypted 
   
