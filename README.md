@@ -24,3 +24,6 @@
    - Price Filter.
    - pageination.
 
+# User Register
+   - Password Validation
+  
