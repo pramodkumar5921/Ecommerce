@@ -16,3 +16,7 @@
    - catchAsyncErrors class.
    - Unhandled Promise Rejection.
    - Uncaughted Exception.
+   - cast Error Handling.
+  
+# Feature of Ecommerce
+   - Search 
