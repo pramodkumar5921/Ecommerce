@@ -26,5 +26,7 @@
 
 # User Register
    - Password Validation
-   - password is Encrypted 
+   - password is Encrypted
+   - Token Generation  
+   - Login Functionality
   
