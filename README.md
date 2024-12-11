@@ -30,4 +30,5 @@
    - Token Generation  
    - Login Functionality
    - Cookies Functionlity
+   - Logout the User
   
