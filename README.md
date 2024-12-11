@@ -31,4 +31,5 @@
    - Login Functionality
    - Cookies Functionlity
    - Logout the User
+   - Admin Functionality
   
