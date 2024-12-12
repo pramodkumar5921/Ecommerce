@@ -33,4 +33,5 @@
    - Logout the User
    - Admin Functionality
    - Forgot Password
+   - Reset Password
   
