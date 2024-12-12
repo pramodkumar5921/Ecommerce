@@ -36,3 +36,5 @@
    - Forgot Password
    - Reset Password
   
+# Backend User & Password Authentication
+   - Get User Details
