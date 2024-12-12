@@ -24,7 +24,8 @@
    - Price Filter.
    - pageination.
 
-# User Register
+# Backend Authentication 
+   - User Register
    - Password Validation
    - password is Encrypted
    - Token Generation  
