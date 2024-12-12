@@ -38,3 +38,4 @@
   
 # Backend User & Password Authentication
    - Get User Details
+   - Update/Change Password
