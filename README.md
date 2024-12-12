@@ -40,3 +40,5 @@
    - Get User Details
    - Update/Change Password
    - Update User Profile
+   - Get All Users -- Admin
+   - Get Single user -- Admin
