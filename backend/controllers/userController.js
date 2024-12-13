@@ -221,3 +221,46 @@ exports.getSingleUser = catchAsyncErrors( async(req,res,next)=>{
   });
 });
 
+
+// update User Role --Admin
+exports.updateUserRole = catchAsyncErrors(async(req,res,next)=>{
+  
+  const newUserData = {
+   name:req.body.name,
+   email:req.body.email,
+   role:req.body.role,
+  };
+
+  const user = await User.findByIdAndUpdate(req.params.id,newUserData,{
+    new:true,
+    runValidators:true,
+    userFindAndModify:false,
+  })
+
+  if(!user){
+    return next(new ErrorHander(`User does not exist with Id: ${req.params.id}`));
+  }
+
+  res.status(200).json({
+   success:true,
+  })
+});
+
+// Delete User --Admin
+exports.deleteUser = catchAsyncErrors(async(req,res,next)=>{
+
+  const user = await User.findByIdAndDelete(req.params.id);
+
+  if(!user){
+    return next(new ErrorHander(`User does not exist with Id: ${req.params.id}`));
+  }
+
+
+  res.status(200).json({
+   success:true,
+   message:"User Deleted Sucessful"
+  });
+});
+
+
+

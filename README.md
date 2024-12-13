@@ -42,3 +42,5 @@
    - Update User Profile
    - Get All Users -- Admin
    - Get Single user -- Admin
+   - Update User Role
+   - Delete the user
