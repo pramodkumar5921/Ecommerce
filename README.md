@@ -45,3 +45,5 @@
    - Update User Role
    - Delete the User
    - Review the Product Functionality 
+   - getProductReviews 
+   - deleteReview
