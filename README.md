@@ -50,3 +50,9 @@
 
 # Making Order Api
    - orderController
+   - Create new Order
+   - get Single Order
+   - get logged in user Orders
+   - get all Orders -- Admin
+   - update Order Status -- Admin
+   - delete order -- Admin
