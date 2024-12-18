@@ -19,7 +19,7 @@ function App() {
   return (
     <Router>
       <Header/>
-      <Route extact path='/' Component={Home} />
+      <Route exact path='/' component={Home} />
       <Footer/>
     </Router>
   );
