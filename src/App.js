@@ -21,7 +21,6 @@ function App() {
     <Router>
       <Header/>
       <Route exact path='/' component={Home} />
-      <Route exact path='/sad' component={Loader}/>
       <Footer/>
     </Router>
   );
