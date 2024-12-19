@@ -15,8 +15,9 @@ const Home = () => {
   },[dispatch])
 
   return (
-    <Fragment>
-
+      <Fragment>
+      {loading ? ("loading") :
+       ( <Fragment>
     <MetaData title="ECOMMERCE"/>
       <div className='banner'>
         <p>Welcome to Ecommerce</p>
@@ -35,7 +36,9 @@ const Home = () => {
            <Product product={product}/>
        ))}
       </div>
-    </Fragment>
+    </Fragment>)
+      }
+      </Fragment>
   );
 }
 

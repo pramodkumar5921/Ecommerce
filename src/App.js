@@ -5,6 +5,7 @@ import WebFont from "webfontloader";
 import React from 'react';
 import Footer from "./component/layout/Footer/Footer"
 import Home from "./component/layout/Home/Home.js"
+import Loader from './component/layout/Loader/Loader.js';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
     <Router>
       <Header/>
       <Route exact path='/' component={Home} />
+      <Route exact path='/sad' component={Loader}/>
       <Footer/>
     </Router>
   );
