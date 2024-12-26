@@ -114,7 +114,7 @@ const UpdateProfile = ({ history }) => {
                 onChange={updateProfileDataChange}
               />
             </div>
-            <input type="submit" value="updateProfile" className="updateProfileBtn" />
+            <input type="submit" value="update" className="updateProfileBtn" />
           </form>
         </div>
       </div>
