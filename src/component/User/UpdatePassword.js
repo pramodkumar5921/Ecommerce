@@ -63,7 +63,6 @@ const UpdatePassword = ({history}) => {
               <h2 className="updatePasswordHeading">Update Password</h2>
               <form
                 className="updatePasswordForm"
-                encType="multipart/form-data"
                 onSubmit={updatePasswordSubmit}
               >
                 <div className="loginPassword">
