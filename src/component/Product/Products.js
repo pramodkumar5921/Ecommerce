@@ -39,12 +39,15 @@ const Products = ({match}) => {
   const keyword = match.params.keyword;
 
   const setCurrentPageNo = (e)=>{
-    setCurrentPage(e)
+    setCurrentPage(e);
   };
 
   const priceHandler = (event,newPrice) => {
     setPrice(newPrice);
   };
+
+  let count = filteredProductsCount;
+
   useEffect(()=>{
     if(error){
       alert.error(error);
@@ -53,18 +56,16 @@ const Products = ({match}) => {
     dispatch(getProduct(keyword,currentPage,price,category,ratings))
   },[dispatch , keyword,currentPage,price,category,ratings,alert,error]);
 
-  let count = filteredProductsCount;
-
   return (
     <Fragment>
         {loading ? (<Loader/>) : 
-        <Fragment>
+        (<Fragment>
 
         <MetaData tittle="PRODUCTS -- ECOMMERCE"/>
          <h2 className='productsHeading'>Products</h2>
             <div className='products'>
                 {products && products.map((product) => (
-                    <ProductCard key={product._id} product={product}></ProductCard>
+                    <ProductCard key={product._id} product={product}/>
                 ))}
             </div>
 
@@ -85,6 +86,7 @@ const Products = ({match}) => {
                 <li className='category-link' key={category}
                 onClick={()=>setCategory(category)}
                 >
+                {category}
                 </li>
              ))}
              </ul>
@@ -121,9 +123,9 @@ const Products = ({match}) => {
             />
            </div>
           )}
-        </Fragment>}
+        </Fragment>)}
     </Fragment>
   );
 }
 
-export default Products
+export default Products;

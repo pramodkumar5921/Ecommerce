@@ -2,7 +2,7 @@ import './App.css';
 import Header from './component/layout/Header/Header';
 import { BrowserRouter as Router, Route} from 'react-router-dom';
 import WebFont from "webfontloader";
-import React from 'react';
+import React, { useEffect } from 'react';
 import Footer from "./component/layout/Footer/Footer"
 import Home from "./component/layout/Home/Home.js"
 import Loader from './component/layout/Loader/Loader.js';
@@ -23,11 +23,12 @@ import ResetPassword from "./component/User/ResetPassword.js";
 function App() {
 
   const {isAuthenticated,user} = useSelector(state=>state.user);
-  React.useEffect(()=>{
+
+  useEffect(()=>{
     WebFont.load({
       google:{
         families:["Roboto","Droid Sans","chilanka"],
-      }
+      },
     });
     store.dispatch(loadUser());
   },[]);

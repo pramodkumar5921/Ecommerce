@@ -8,6 +8,7 @@ import ReviewCard from "./ReviewCard";
 import Loader from '../layout/Loader/Loader';
 import {useAlert} from "react-alert"
 import MetaData from '../layout/MetaData';
+import {Rating} from "@material-ui/lab";
 
 const ProductDetails = ({match}) => {
   const dispatch = useDispatch();
@@ -41,7 +42,7 @@ const ProductDetails = ({match}) => {
         <div>
             <Carousel>
                 {product.images && product.images.map((item,i)=>(
-                    <img className="CarouselImage" key={item.url} src={item.url} alt={`${i} Slide`}/>
+                    <img className="CarouselImage" key={i} src={item.url} alt={`${i} Slide`}/>
                 ))}
             </Carousel>
         </div>
@@ -51,8 +52,8 @@ const ProductDetails = ({match}) => {
             <p>Product # {product._id}</p>
           </div>
           <div className='detailsBlock-2'>
-              <ReactStarts {...options}/>
-              <span>({product.numOfReviews} Reviews)</span>
+              <Rating {...options}/>
+              <span className='detailsBlock-2-span'>{" "}({product.numOfReviews} Reviews)</span>
           </div>
           <div className='detailsBlock-3'>
              <h1>{`₹${product.price}`}</h1>

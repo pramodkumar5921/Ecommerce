@@ -13,7 +13,6 @@ import {
   REGISTER_USER_SUCCESS,
   UPDATE_PROFILE_FAIL,
   UPDATE_PROFILE_REQUEST,
-  UPDATE_PROFILE_RESET,
   UPDATE_PROFILE_SUCCESS,
   UPDATE_PASSWORD_REQUEST,
   UPDATE_PASSWORD_SUCCESS,
@@ -34,7 +33,7 @@ export const login = (email, password) => async (dispatch) => {
 
     const config = { headers: { "Content-Type": "application/json" } };
 
-    const { data } = await axios.post(`/api/v1/login`, { email, password });
+    const { data } = await axios.post(`/api/v1/login`, { email, password } , config);
 
     dispatch({ type: LOGIN_SUCCESS, payload: data.user });
   } catch (error) {
@@ -129,7 +128,7 @@ export const forgotPassword = (email) => async (dispatch) => {
 
     const config = { headers: { "Content-Type": "application/json" } };
 
-    const { data } = await axios.post(`/api/v1/password/forgot`, email);
+    const { data } = await axios.post(`/api/v1/password/forgot`, email,config);
 
     dispatch({ type: FORGOT_PASSWORD_SUCCESS , payload: data.message });
   } catch (error) {
