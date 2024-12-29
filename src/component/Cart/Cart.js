@@ -1,12 +1,16 @@
 import React, { Fragment } from 'react';
 import "./Cart.css";
 import CartItemCard from "./CartItemCard";
+import { useDispatch, useSelector } from 'react-redux';
+
 
 const Cart = () => {
   const item={
     product:"productID",
     price:200,
     name:"pramod",
+    quantity:1,
+    image:"https://i.ibb.co/DRST11n/1.webp",
   };
   return <Fragment>
     <div className='cartPage'>
@@ -20,10 +24,25 @@ const Cart = () => {
             <CartItemCard item={item}/>
             <div className='cartInput'>
               <button>-</button>
-              <input type='number'/>
+              <input type='number' value={item.quantity} readOnly/>
               <button>+</button>
             </div>
+            <p className='cartSubtotal'>{`₹${
+                item.price * item.quantity
+            }`}</p>
         </div>
+        
+          <div className='cartGrossProfit'>
+            <div></div>
+            <div className='cartGrossProfitBox'>
+             <p>Gross Total</p>
+             <p>{`₹600`}</p>
+            </div>
+            <div></div>
+            <div className='checkOutBtn'>
+              <button>Check Out</button>
+            </div>
+          </div>
     </div>
   </Fragment>
 }
