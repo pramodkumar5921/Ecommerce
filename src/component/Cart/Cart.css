@@ -126,6 +126,7 @@
     }
 
     .cartInput > input{
+        width: 2vmax;
         padding: 1.5vmax;
         font: 300 2vmax "Roboto";
     }
