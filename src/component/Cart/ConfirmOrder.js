@@ -19,7 +19,7 @@ const ConfirmOrder = () => {
 
   const tax = subtotal * 0.18;
 
-  const totalPrice = subtotal + tax + shippingCharges;
+  const totalPrice = Math.ceil(subtotal + tax + shippingCharges);
 
   const address = `${shippingInfo.address}, ${shippingInfo.city} , ${shippingInfo.state} , ${shippingInfo.pincode},${shippingInfo.country}`;
   return (
@@ -55,7 +55,7 @@ const ConfirmOrder = () => {
                     <Link to={`/product/${item.product}`}>{item.name}</Link>
                     <span>
                       {item.quantity} X ₹{item.price} = 
-                      <b>₹{item.price * item.quantity}</b>
+                      <b> ₹{item.price * item.quantity}</b>
                     </span>
                   </div>
                 ))}
