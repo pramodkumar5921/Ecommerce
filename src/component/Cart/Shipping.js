@@ -11,8 +11,9 @@ import PhoneIcon from "@material-ui/icons/Phone";
 import TransferWithinAStationIcon  from "@material-ui/icons/TransferWithinAStation";
 import {Country,State} from "country-state-city";
 import { useAlert } from 'react-alert';
+import CheckoutSteps from '../Cart/CheckoutSteps';
 
-const Shipping = () => {
+const Shipping = ({history}) => {
     const dispatch = useDispatch();
     const alert = useAlert();
     const {shippingInfo} = useSelector((state)=>state.cart);
@@ -23,10 +24,28 @@ const Shipping = () => {
     const [pincode,setPincode] = useState(shippingInfo.pincode);
     const [phoneNo,setPhoneNo] = useState(shippingInfo.phoneNo);
 
-    const shippingSubmit = ()=>{};
+    const shippingSubmit = (e)=>{
+        e.preventDefault();
+
+        if(phoneNo.length < 10 || phoneNo.length > 10){
+            alert.error("Phone Number should be 10 digits");
+            return;
+        }
+
+        dispatch(
+            saveShippingInfo({address,city,state,country,pincode,phoneNo})
+        );
+
+        history.push("/order/confirm");
+    };
 
   return (
     <Fragment>
+
+    <MetaData title="Shipping Details"/>
+
+    <CheckoutSteps activeStep={0}/>
+
         <div className='shippingContainer'>
           <div className='shippingBox'>
             <h2 className='shippingHeading'>Shipping Details</h2>
