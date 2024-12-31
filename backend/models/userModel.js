@@ -17,7 +17,7 @@ const userSchema = new mongoose.Schema({
         type:String,
         required:[true,"Please Enter Your Email"],
         unique:true,
-        validate:[validator.isEmail,"Please Enter a valid Email"]
+        validate:[validator.isEmail,"Please Enter a valid Email"],
     },
 
     password:{
@@ -35,12 +35,16 @@ const userSchema = new mongoose.Schema({
         url:{
             type:String,
             required:true
-        }
+        },
     },
 
     role:{
         type:String,
         default:"user",
+    },
+    createdAt:{
+        type:Date,
+        default:Date.now,
     },
     resetPasswordToken:String,
     resetPasswordExpire:Date,
